@@ -1,0 +1,84 @@
+* {
+  font-family: Avenir Next;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+#cat_list {
+  top: 0;
+  float: left;
+  height: 100%;
+  width: 30%;
+  background: rgba(0, 0, 0, .95);
+}
+#cat_list li {
+  width: calc(100%-40px);
+  padding: 20px;
+  color: rgba(255, 255, 255, .8);
+  text-align: left;
+  cursor: pointer;
+  transition: all ease .2s;
+}
+#cat_list li:hover {
+  background: rgba(0, 0, 0, .7);
+}
+#right {
+  width: 70%;
+  float: right;
+}
+h1 {
+  padding: 30px;
+  width: 100%;
+  background: rgba(0, 0, 0, .2);
+}
+#premium {
+  position: absolute;
+  margin-top: 13px;
+  margin-left: 15px;
+  font-size: .7rem;
+  letter-spacing: .4rem;
+  padding-left: 5px;
+  padding-top: 2px;
+  background: #bf6c07;
+  color: white;
+  border-radius: 5px;
+}
+img {
+  padding: 20px;
+  cursor: pointer;
+  transition: all ease .3s;
+  width: 28vw;
+  height: 28vw;
+  border-radius: 50%;
+}
+img:hover {
+  transform: scale(1.1);
+}
+img:active  {
+  transform: scale(1.2);
+}
+
+// CATS
+#cat {
+  padding: 30px;
+  margin: 0 auto;
+}
+#cat h2 {
+  padding: 30px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+#cat_count {
+  padding: 30px;
+  font-size: 8rem;
+  font-weight: 700;
+}
+#cat img {
+  margin: 30px;
+  float: right;
+  margin-right: 80px;
+}
