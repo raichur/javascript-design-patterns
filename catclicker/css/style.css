@@ -11,8 +11,8 @@ img {
   padding: 20px;
   cursor: pointer;
   transition: all ease .3s;
-  width: 20vw;
-  height: 20vw;
+  width: 18vw;
+  height: 18vw;
   border-radius: 50%;
 }
 .img_holder:hover img {
@@ -27,4 +27,5 @@ h2 {
 }
 .img_holder {
   display: inline-block;
+  margin: 10px;
 }
