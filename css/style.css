@@ -1,0 +1,25 @@
+* {
+  font-family: Avenir Next;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.cat {
+  padding: 40px;
+  cursor: pointer;
+  transition: all ease .3s;
+  width: 40%;
+  height: auto;
+}
+img {
+  border-radius: 10px;
+}
+.cat:hover {
+  transform: scale(1.02);
+}
+.cat:active {
+  transform: scale(1.1);
+}
+h2 {
+  font-weight: 500;
+}
