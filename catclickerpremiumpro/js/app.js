@@ -43,6 +43,7 @@ var controller = {
     // Initialize views
     cat_list_view.init();
     cat_detail_view.init();
+    admin_panel_view.init();
   },
 
   get_cats: function() {
@@ -60,6 +61,14 @@ var controller = {
   increment_counter: function() {
     model.current_cat.click_count++;
     cat_detail_view.render();
+  },
+
+  set_values: function(cat_name, new_cat_name, new_cat_count, new_cat_img) {
+    for(var i = 0; i <= model.cats.length; i++) {
+      model.cats[i].cat_name.name = new_cat_name;
+      model.cats[i].cat_name.img_src = new_cat_img;
+      model.cats[i].cat_name.count = new_cat_count;
+    }
   }
 };
 
@@ -92,10 +101,7 @@ var cat_detail_view = {
 var cat_list_view = {
 
   init: function() {
-    // Store pointer to DOM element
     this.cat_list_elem = $('#cat_list');
-
-    // Render the view (Update DOM elements)
     this.render();
   },
 
@@ -124,6 +130,30 @@ var cat_list_view = {
       // Add the element to the list
       this.cat_list_elem.append(elem);
     }
+  }
+};
+
+var admin_panel_view = {
+
+  init: function() {
+    this.admin_button = $('#admin');
+    this.admin_panel = $('#admin_panel');
+
+    this.render();
+  },
+
+  render: function() {
+    this.admin_panel.hide();
+    this.admin_button.click(function(){
+      $('#admin_panel').fadeToggle();
+    });
+  },
+  submit: function() {
+    this.cat_name = $('#cat_name').text();
+    this.cat_name_edit = $('#cat_name_edit').val();
+    this.cat_count_edit = $('#cat_count_edit').val();
+    this.cat_img_edit = $('#cat_img_edit').val();
+    controller.set_values(this.cat_name, this.cat_name_edit, this.cat_count_edit, this.cat_img_edit);
   }
 };
 

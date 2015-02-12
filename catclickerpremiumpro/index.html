@@ -9,10 +9,19 @@
   <ul id="cat_list"></ul>
   <div id="right">
     <h1>Cat Clicker <span id="premium">PREMIUM</span> <span id="pro">PRO</span></h1>
+    <div id="admin">Admin</div>
     <div id="cat">
       <img src="" alt="" id="cat_img">
       <h2 id="cat_name"></h2>
       <div id="cat_count"></div>
+    </div>
+    <div id="admin_panel">
+      <form action="javascript:admin_panel_view.submit();">
+        <input type="text" placeholder="Change Cat Name" id="cat_name_edit">
+        <input type="number" placeholder="Change Number of Clicks" id="cat_count_edit">
+        <input type="text" placeholder="Change Cat Image URL" id="cat_img_edit">
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
