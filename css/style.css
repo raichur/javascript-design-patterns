@@ -5,14 +5,14 @@
   text-align: center;
 }
 .cat {
-  padding: 40px;
+  padding: 20px;
   cursor: pointer;
   transition: all ease .3s;
-  width: 40%;
+  width: 24%;
   height: auto;
-}
-img {
-  border-radius: 10px;
+  -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   border-radius: 10px;
 }
 .cat:hover {
   transform: scale(1.02);
