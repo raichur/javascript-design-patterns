@@ -4,22 +4,27 @@
   padding: 0;
   text-align: center;
 }
-.cat {
+h1 {
+  padding: 20px;
+}
+img {
   padding: 20px;
   cursor: pointer;
   transition: all ease .3s;
-  width: 24%;
-  height: auto;
-  -moz-border-radius: 10px;
-   -webkit-border-radius: 10px;
-   border-radius: 10px;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
 }
-.cat:hover {
-  transform: scale(1.02);
-}
-.cat:active {
+.img_holder:hover img {
   transform: scale(1.1);
 }
+.img_holder:active h2  {
+  transform: scale(1.2);
+}
 h2 {
+  transition: all ease .4s;
   font-weight: 500;
+}
+.img_holder {
+  display: inline-block;
 }
