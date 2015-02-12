@@ -64,11 +64,14 @@ var controller = {
   },
 
   set_values: function(cat_name, new_cat_name, new_cat_count, new_cat_img) {
-    for(var i = 0; i <= model.cats.length; i++) {
-      model.cats[i].cat_name.name = new_cat_name;
-      model.cats[i].cat_name.img_src = new_cat_img;
-      model.cats[i].cat_name.count = new_cat_count;
+    for(var i = 0; i < model.cats.length; i++) {
+      if(model.cats[i].name == cat_name) {
+        model.cats[i].name = new_cat_name;
+        model.cats[i].img_src = new_cat_img;
+        model.cats[i].click_count = new_cat_count;
+      }
     }
+    controller.init();
   }
 };
 
