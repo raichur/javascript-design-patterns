@@ -113,7 +113,7 @@ var cat_list_view = {
     var cats = controller.get_cats();
 
     // Make the cat list empty
-    this.cat_list_elem.innerHTML = '';
+    this.cat_list_elem.html('');
 
     // Loop over cats and create elements
     for(var i = 0; i < cats.length; i++) {
