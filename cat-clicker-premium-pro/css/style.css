@@ -8,24 +8,6 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
-#cat_list {
-  top: 0;
-  float: left;
-  height: 100%;
-  width: 30%;
-  background: rgba(0, 0, 0, .95);
-}
-#cat_list li {
-  width: calc(100%-40px);
-  padding: 20px;
-  color: rgba(255, 255, 255, .8);
-  text-align: left;
-  cursor: pointer;
-  transition: all ease .2s;
-}
-#cat_list li:hover {
-  background: rgba(0, 0, 0, .7);
-}
 #right {
   width: 70%;
   float: right;
@@ -77,20 +59,7 @@ h1 {
   margin-right: 30px;
   margin-top: 30px;
 }
-img {
-  padding: 20px;
-  cursor: pointer;
-  transition: all ease .3s;
-  width: 23vw;
-  height: 23vw;
-  border-radius: 50%;
-}
-img:hover {
-  transform: scale(1.1);
-}
-img:active  {
-  transform: scale(1.2);
-}
+
 
 // CATS
 #cat {
@@ -102,13 +71,65 @@ img:active  {
   font-size: 2rem;
   font-weight: 500;
 }
+#cat_list {
+  top: 0;
+  float: left;
+  height: 100%;
+  width: 30%;
+  background: rgba(0, 0, 0, .95);
+}
+#cat_list li {
+  width: calc(100%-40px);
+  padding: 20px;
+  color: rgba(255, 255, 255, .8);
+  text-align: left;
+  cursor: pointer;
+  transition: all ease .2s;
+}
+#cat_list li:hover {
+  background: rgba(0, 0, 0, .7);
+}
 #cat_count {
   padding: 30px;
   font-size: 8rem;
   font-weight: 700;
+  max-width: 400px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  line-height: 3rem;
 }
 #cat img {
   margin: 30px;
   float: left;
   margin-right: 80px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all ease .3s;
+  width: 23vw;
+  height: 23vw;
+  border-radius: 50%;
+}
+#cat img:hover {
+  transform: scale(1.1);
+}
+#cat img:active  {
+  transform: scale(1.2);
+}
+
+// ADMIN
+#admin_panel {
+  position: absolute;
+  margin-top: -30px;
+}
+#admin_panel input {
+  border: 1px solid rgba(0,0,0,.2);
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+#admin_panel input[type^="submit"] {
+  background: #1d1d1d;
+  color: white;
 }

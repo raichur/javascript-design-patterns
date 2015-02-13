@@ -141,7 +141,6 @@ var admin_panel_view = {
   init: function() {
     this.admin_button = $('#admin');
     this.admin_panel = $('#admin_panel');
-
     this.render();
   },
 
