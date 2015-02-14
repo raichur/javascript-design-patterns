@@ -1,4 +1,4 @@
-var VkiewModel = function() {
+var ViewModel = function() {
   this.clickCount = ko.observable(0);
   this.name = ko.observable('Tabby');
   this.imgSrc = ko.observable('img/cat1.jpg');
@@ -8,4 +8,4 @@ var VkiewModel = function() {
   };
 };
 
-ko.applyBindings(new VkiewModel());
+ko.applyBindings(new ViewModel());
