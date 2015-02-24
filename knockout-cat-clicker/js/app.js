@@ -6,12 +6,25 @@ var ViewModel = function() {
   this.incrementCounter = function() {
     this.clickCount(this.clickCount() + 1);
   };
+
+  this.catLevel = ko.pureComputed({
+        read: function () {
+            var value = this.clickCount();
+            if(value <= 10) {
+              return "Newborn";
+            } else if(value <= 30) {
+              return "Baby";
+            } else if(value <= 50) {
+              return "Kid";
+            } else if(value <= 90) {
+              return "Big Kid";
+            } else {
+              return "Grown Up";
+            }
+        },
+        owner: this
+    });
+
 };
 
 ko.applyBindings(new ViewModel());
-
-
-// function AppViewModel() {
-//     this.firstName = ko.observable('Bob');
-//     this.lastName = ko.observable('Smith');
-// }
