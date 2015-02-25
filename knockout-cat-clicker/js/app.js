@@ -7,6 +7,12 @@ var ViewModel = function() {
     this.clickCount(this.clickCount() + 1);
   };
 
+  this.nickNames = ko.observableArray([
+        { name: 'Kitty 1' },
+        { name: 'Kitty 2' },
+        { name: 'Kitty 3' }
+    ]);
+
   this.catLevel = ko.pureComputed({
         read: function () {
             var value = this.clickCount();
